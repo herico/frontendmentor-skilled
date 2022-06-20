@@ -5,37 +5,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://css.gg/shopping-bag.css' rel='stylesheet'>
+    <link href='https://css.gg/qr.css' rel='stylesheet'>
+    <link href='https://css.gg/camera.css' rel='stylesheet'>
+    <link href='https://css.gg/image.css' rel='stylesheet'>
+    <link href='https://css.gg/color-bucket.css' rel='stylesheet'>
     <link rel="stylesheet" href="./style.css">
     <title>Skilled</title>
 </head>
 
 <body>
-<header class="header">
-    <nav class="navigation">
+    <header class="header">
+        <nav class="navigation">
+            <h1 class="logo">Skilled</h1>
+            <button type="button" class="cta-btn dark">Get Started</button>
+        </nav>
+        <section class="hero">
+            <p class="intro">Maximized skills, Minimized budget</p>
+            <p class="subtitle">Our modern courses across a range of in-demand skills will give you the knowledge you
+                need to live the life you want.</p>
+            <button type="button" class="cta-btn">Get Started</button>
+        </section>
+        <section class="portrait">
+            <div class="stat">
+                <span class="title">Course Hour</span>
+                <span class="value">1,451</span>
+            </div>
+            <div class="stat top">
+                <span class="title">Members</span>
+                <span class="value">29K</span>
+            </div>
+            <div class="image">
+                <img src="./profile.png" alt="Drinking coffee">
+            </div>
+        </section>
+    </header>
+    <main class="main">
+        <section class="projects">
+            <div class="project project-intro">
+                <h2>Check out our most popular courses!</h2>
+            </div>
+            <div class="project">
+                <span class="icon"><i class="gg-color-bucket"></i></span>
+                <h3 class="title">Animation</h3>
+                <p class="text">Learn the latest animation techniques to create stunning motion design and captivate your
+                    audience.</p>
+                <a href="#">Get Started</a>
+            </div>
+            <div class="project">
+                <span class="icon"><i class="gg-image"></i></span>
+                <h3 class="title">Design</h3>
+                <p class="text">Create beautiful, usable interfaces to help shape the future of how the web looks.</p>
+                <a href="#">Get Started</a>
+            </div>
+            <div class="project">
+                <span class="icon"><i class="gg-camera"></i></span>
+                <h3 class="title">Photography</h3>
+                <p class="text">Explore critical fundamentals like lighting, composition, and focus to capture exceptional
+                    photos.</p>
+                <a href="#">Get Started</a>
+            </div>
+            <div class="project">
+                <span class="icon"><i class="gg-qr"></i></span>
+                <h3 class="title">Crypto</h3>
+                <p class="text">All you need to know to get started investing in crypto. Go from beginner to advanced with this
+                    54 hour course.</p>
+                <a href="#">Get Started</a>
+            </div>
+            <div class="project">
+                <span class="icon"><i class="gg-shopping-bag"></i></span>
+                <h3 class="title">Business</h3>
+                <p class="text">A step-by-step playbook to help you start, scale, and sustain your business without outside
+                    investment.</p>
+                <a href="#">Get Started</a>
+            </div>
+        </section>
+    </main>
+    <footer class="navigation footer">
         <h1 class="logo">Skilled</h1>
-        <button type="button" class="cta-btn dark">Get Started</button>
-    </nav>
-    <section class="hero">
-        <p class="intro">Maximized skills, Minimized budget</p>
-        <p class="subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat magni dicta voluptate vel amet?</p>
         <button type="button" class="cta-btn">Get Started</button>
-    </section>
-    <section class="portrait">
-        <div class="stat">
-            <span class="title">Course Hour</span>
-            <span class="value">1,451</span>
-        </div>
-        <div class="stat top">
-            <span class="title">Members</span>
-            <span class="value">29K</span>
-        </div>
-        <div class="image">
-            <img src="./profile.png" alt="Drinking coffee">
-        </div>
-    </section>
-</header>
+    </footer>
 </body>
+
 </html>

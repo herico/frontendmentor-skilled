@@ -1,32 +1,45 @@
 *,
-*::before
+*::before,
 *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --btn-background: linear-gradient(90deg, rgb(250 62 0) 0%, rgba(233, 111, 111, 1) 37%, rgb(250 4 4 / 91%) 72%, rgba(228, 0, 0, 0.8771709367340687) 100%);
+    --btn-color: white;
+    --box-shadow: 8px 20px 20px 20px rgb(215 215 215 / 28%);
+}
+
 body {
-    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: black;
     background-color: #fff;
+    font-weight: 400;
+    max-width: 1300px;
+    margin: auto;
+    box-shadow: var(--box-shadow);
 }
 
-.header {
-    padding: 0.5rem;
-    margin-bottom: 3rem;
+.header,
+.main {
+    padding: 1.6rem;
+    margin-bottom: 1rem;
 }
 
 .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin-bottom: 3rem;
 }
 
 .logo {
-   font-size: 2.1rem;
-   font-weight: 700;
+    font-size: 2.1rem;
+    font-weight: 700;
 }
 
 .cta-btn {
@@ -35,7 +48,7 @@ body {
     font-size: 1.2rem;
     border-radius: 33px;
     color: white;
-    background: linear-gradient(90deg, rgba(233,100,56,1) 0%, rgba(233,111,111,1) 37%, rgba(233,108,108,1) 72%, rgba(228,0,0,0.8771709367340687) 100%);
+    background: var(--btn-background);
     font-weight: 400;
 }
 
@@ -47,11 +60,14 @@ body {
 .intro {
     font-size: 1.98rem;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .subtitle {
     font-size: 1.2rem;
     color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    margin-bottom: 1rem;
 }
 
 .portrait {
@@ -59,21 +75,21 @@ body {
     max-width: 100%;
     width: 300px;
     height: 300px;
-    margin: 4rem auto 0;
+    margin: 4rem auto 5rem;
 }
 
 @media (min-width: 400px) {
     .portrait {
-        width: 400px;
-        height: 400px;
-    } 
+        width: 360px;
+        height: 360px;
+    }
 }
 
 .image {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: linear-gradient(90deg, rgba(233,100,56,1) 0%, rgba(233,111,111,1) 37%, rgba(233,108,108,1) 72%, rgba(228,0,0,0.8771709367340687) 100%);
+    background: #f95e5e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,8 +113,8 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 7px;
-    box-shadow: 3px 2px 0px 1px rgba(0,0,0,0.1);
-    font-size: 1.2rem;
+    box-shadow: var(--box-shadow);
+    font-size: 1rem;
 }
 
 .stat.top {
@@ -109,7 +125,7 @@ body {
 }
 
 .stat .title {
-    font-weight: 400;
+    font-weight: 500;
     color: rgba(0, 0, 0, 0.6);
 }
 
@@ -117,4 +133,142 @@ body {
     font-weight: 700;
     font-size: 1.4rem;
     color: black;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.project {
+    min-height: 140px;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    border-radius: 13px;
+    padding: 1.6rem;
+    position: relative;
+}
+
+.project-intro {
+    background: var(--btn-background);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.project h2 {
+    font-size: 1.8rem;
+}
+
+.project h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 1.3rem 0;
+}
+
+.project .text {
+    font-size: 1.15rem;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 1rem;
+}
+
+.project a {
+    color: #f95e5e;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.project .icon {
+    position: absolute;
+    top: -25px;
+    background: var(--btn-background);
+    color: white;
+    font-size: 2rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+}
+
+.footer .cta-btn {
+    background: linear-gradient(42deg, rgb(103 75 242) 0%, rgb(132 1 255) 37%, rgb(163 1 1 / 91%) 72%, rgb(244 14 14 / 88%) 100%);
+}
+
+@media (min-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .hero {
+        width: 50%;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    .hero .cta-btn {
+        max-width: 200px;
+    }
+
+    .hero .intro {
+        font-size: 4rem;
+    }
+
+    .portrait {
+        width: 300px;
+        height: 500px;
+        position: relative;
+    }
+
+    .portrait::after {
+        content: "";
+        position: absolute;
+        top: -189px;
+        right: -208px;
+        width: 239px;
+        height: 664px;
+        background-color: #8443df;
+        border-radius: 60px;
+        transform: rotate(45deg);
+        z-index: -2;
+    }
+
+    .image {
+        border-radius: 200px;
+    }
+
+    .stat.top {
+        right: 50px;
+    }
+
+    .stat {
+        min-width: 140px;
+        justify-content: center;
+    }
+
+    .stat .value {
+        font-size: 2.2rem;
+    }
 }
