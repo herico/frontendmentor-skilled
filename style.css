@@ -50,6 +50,12 @@ body {
     color: white;
     background: var(--btn-background);
     font-weight: 400;
+    cursor: pointer;
+    transition: filter 289ms ease-in-out;
+}
+
+.cta-btn:hover, .cta-btn:focus, a:hover, a:visited {
+    filter: brightness(90%)
 }
 
 .cta-btn.dark {
